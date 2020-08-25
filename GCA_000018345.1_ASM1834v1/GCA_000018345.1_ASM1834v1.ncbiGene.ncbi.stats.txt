@@ -1,0 +1,2 @@
+itemCount: 5502
+basesCovered: 5993513

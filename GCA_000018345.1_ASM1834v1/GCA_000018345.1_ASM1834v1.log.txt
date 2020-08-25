@@ -1,0 +1,325 @@
++ export 'outside=/hive/data/outside/ncbi/genomes/[refseq|genbank]'
++ outside='/hive/data/outside/ncbi/genomes/[refseq|genbank]'
++ export 'inside=/hive/data/inside/ncbi/genomes/[refseq|genbank]'
++ inside='/hive/data/inside/ncbi/genomes/[refseq|genbank]'
+++ date '+%FT%T %s'
++ export 'dateStamp=2015-12-19T12:43:06 1450557786'
++ dateStamp='2015-12-19T12:43:06 1450557786'
++ '[' 3 -lt 2 ']'
++ export asmType=genbank
++ asmType=genbank
++ '[' genbank '!=' genbank -a genbank '!=' refseq ']'
++ outside=/hive/data/outside/ncbi/genomes/genbank
++ inside=/hive/data/inside/ncbi/genomes/genbank
++ export scripts=/hive/data/inside/ncbi/genomes/refseq/scripts
++ scripts=/hive/data/inside/ncbi/genomes/refseq/scripts
++ export fnaFile=bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
++ fnaFile=bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
++ printf '# %s ncbiToUcsc.sh %s\n' '2015-12-19T12:43:06 1450557786' bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+# 2015-12-19T12:43:06 1450557786 ncbiToUcsc.sh bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+++ basename bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+++ sed -e 's/_genomic.fna.gz//;'
++ B=GCA_000018345.1_ASM1834v1
+++ dirname bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+++ sed -e 's#/all_assembly_versions/#/latest_assembly_versions/#;'
++ D=bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
+++ echo bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+++ sed -e 's/_genomic.fna.gz/_assembly_report.txt/;'
++ asmReport=bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt
++ primaryAsm=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly
++ asmStructure=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure
++ rmOut=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_rm.out.gz
++ gffFile=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.gff.gz
++ chr2acc=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/assembled_chromosomes/chr2acc
++ unplacedScafAgp=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unplaced_scaffolds/AGP/unplaced.scaf.agp.gz
++ chr2scaf=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unlocalized_scaffolds/unlocalized.chr2scaf
++ nonNucAsm=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/non-nuclear
++ nonNucChr2acc=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/non-nuclear/assembled_chromosomes/chr2acc
++ nonNucChr2scaf=/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/non-nuclear/unlocalized_scaffolds/unlocalized.chr2scaf
++ export partCount=0
++ partCount=0
++ export unplacedOnly=1
++ unplacedOnly=1
++ '[' '!' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt ']'
++ '[' '!' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.checkAgpStatusOK.txt ']'
++ mkdir -p /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ '[' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit ']'
++ printf '# %s NCBI 2bit %s\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 NCBI 2bit GCA_000018345.1_ASM1834v1
++ printf '# %s outside fna %s\n' '2015-12-19T12:43:06 1450557786' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+# 2015-12-19T12:43:06 1450557786 outside fna /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
++ faToTwoBit /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit
++ twoBitInfo /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit stdout
++ sort -k2nr
++ touch -r /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit
++ touch -r /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes
++ '[' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/assembled_chromosomes/chr2acc ']'
++ echo '# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/assembled_chromosomes/chr2acc'
+# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/assembled_chromosomes/chr2acc
++ '[' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unlocalized_scaffolds/unlocalized.chr2scaf ']'
++ echo '# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unlocalized_scaffolds/unlocalized.chr2scaf'
+# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unlocalized_scaffolds/unlocalized.chr2scaf
+++ wc -l
+++ find /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure -type f
+++ grep alt.scaf.agp.gz
+find: `/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure': No such file or directory
+++ true
++ altCount=0
++ '[' 0 -gt 0 ']'
++ /hive/data/inside/ncbi/genomes/refseq/scripts/ucscPatchNames.sh /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt
++ '[' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.patch.names ']'
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.patch.names
++ /hive/data/inside/ncbi/genomes/refseq/scripts/ucscAltNames.sh /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt
++ '[' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.alt.names ']'
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.alt.names
++ '[' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unplaced_scaffolds/AGP/unplaced.scaf.agp.gz ']'
++ echo '# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unplaced_scaffolds/AGP/unplaced.scaf.agp.gz'
+# 2015-12-19T12:43:06 1450557786 not found: /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/Primary_Assembly/unplaced_scaffolds/AGP/unplaced.scaf.agp.gz
++ '[' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/non-nuclear/assembled_chromosomes/chr2acc ']'
++ '[' -s /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_structure/non-nuclear/unlocalized_scaffolds/unlocalized.chr2scaf ']'
++ printf '# %s partCount: %s\n' '2015-12-19T12:43:06 1450557786' 0
+# 2015-12-19T12:43:06 1450557786 partCount: 0
+++ ls '/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/*.ucsc.to.ncbi.*.names'
+++ wc -l
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/*.ucsc.to.ncbi.*.names: No such file or directory
+++ true
++ namesCount=0
++ '[' 0 -gt 0 ']'
++ '[' 0 -eq 0 ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing no structure assembly'
+# 2015-12-19T12:43:06 1450557786 constructing no structure assembly
++ echo '# 2015-12-19T12:43:06 1450557786 rm -f "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.ncbi.gz"'
+# 2015-12-19T12:43:06 1450557786 rm -f "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.ncbi.gz"
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.ncbi.gz
++ echo '# 2015-12-19T12:43:06 1450557786 rm -f "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure..agp.ncbi.gz"'
+# 2015-12-19T12:43:06 1450557786 rm -f "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure..agp.ncbi.gz"
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure..agp.ncbi.gz
++ '[' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.gz ']'
+++ grep -v '^#' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt
+++ wc -l
++ contigCount=2
++ '[' 2 -gt 0 ']'
++ '[' 0 -eq 1 ']'
++ echo '/hive/data/inside/ncbi/genomes/refseq/scripts/noStructureAgp.pl ncbi "/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt" "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes" | gzip -c > "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure..agp.ncbi.gz"'
+/hive/data/inside/ncbi/genomes/refseq/scripts/noStructureAgp.pl ncbi "/hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt" "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes" | gzip -c > "/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure..agp.ncbi.gz"
++ /hive/data/inside/ncbi/genomes/refseq/scripts/noStructureAgp.pl ncbi /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes
++ gzip -c
++ touch -r /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.ncbi.gz
++ '[' 0 -eq 1 ']'
++ maxNameLength=32
++ '[' 32 -gt 31 ']'
++ echo '# 2015-12-19T12:43:06 1450557786 rebuilding UCSC no structure assembly from ncbi 32'
+# 2015-12-19T12:43:06 1450557786 rebuilding UCSC no structure assembly from ncbi 32
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes
++ rm -f '/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/*.ucsc.to.ncbi.*.names'
++ twoBitInfo /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit stdout
++ cut -f1
++ sed -e 's#\(.*\)\.\([0-9][0-9]*$\)#\1v\2\t\1.\2#;'
++ twoBitToFa /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit stdout
++ sed -e 's#\.\([0-9][0-9]*$\)#v\1#;'
++ faToTwoBit stdin /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit
++ touch -r /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit
++ twoBitInfo /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit stdout
++ sort -k2nr
++ rm -f '/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/*agp.gz' '/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/*agp.ucsc.gz'
++ twoBitToFa /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit stdout
++ hgFakeAgp stdin stdout
++ gzip -c
++ touch -r /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.fake.agp.gz
++ cp -p /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.fake.agp.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.agp.ucsc.gz
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_noStructure.agp.ncbi.gz
++ twoBitToFa /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit stdout
++ hgFakeAgp stdin stdout
++ gzip -c
++ touch -r /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.fake.agp.ncbi.gz
++ echo '# 2015-12-19T12:43:06 1450557786 verify NCBI 2bit file GCA_000018345.1_ASM1834v1'
+# 2015-12-19T12:43:06 1450557786 verify NCBI 2bit file GCA_000018345.1_ASM1834v1
++ grep -v '^#'
++ zcat /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.fake.agp.ncbi.gz
++ checkAgpAndFa stdin /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit
++ tail -1
+All AGP and FASTA entries agree - both files are valid
++ echo '# 2015-12-19T12:43:06 1450557786 verify NCBI 2bit file GCA_000018345.1_ASM1834v1'
+# 2015-12-19T12:43:06 1450557786 verify NCBI 2bit file GCA_000018345.1_ASM1834v1
+++ grep -v '^#'
+++ checkAgpAndFa stdin /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit
+++ tail -1
+++ zcat /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.fake.agp.ncbi.gz
++ checkAgp='All AGP and FASTA entries agree - both files are valid'
++ '[' 'All AGP and FASTA entries agree - both files are valid' '!=' 'All AGP and FASTA entries agree - both files are valid' ']'
++ echo 'All AGP and FASTA entries agree - both files are valid'
++ date '+%FT%T %s'
+++ cat /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes
+++ wc -l
++ export wcNcbi=2
++ wcNcbi=2
++ export wcUcsc=0
++ wcUcsc=0
++ '[' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes ']'
+++ cat /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes
+++ wc -l
++ wcUcsc=2
++ '[' 2 -ne 2 ']'
++ printf '# %s verify UCSC 2bit file %s\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 verify UCSC 2bit file GCA_000018345.1_ASM1834v1
++ '[' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit ']'
+++ zcat /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.agp.ucsc.gz
+++ grep -v '^#'
+++ checkAgpAndFa stdin /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit
+++ tail -1
++ checkAgp='All AGP and FASTA entries agree - both files are valid'
++ '[' 'All AGP and FASTA entries agree - both files are valid' '!=' 'All AGP and FASTA entries agree - both files are valid' ']'
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucscToNcbi.lift
++ '[' '!' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucscToNcbi.lift ']'
++ awk 'BEGIN{OFS="\t"}{printf "0\t%s\t%d\t%s\t%d\n",  $1,$2,$3,$2}'
++ join '-t	' /dev/fd/63 /dev/fd/62
+++ sort /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes
+++ sort /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.fake.names
++ awk 'BEGIN{OFS="\t"}{printf "0\t%s\t%d\t%s\t%d\n",  $3,$2,$1,$2}'
++ join '-t	' /dev/fd/63 /dev/fd/62
+++ sort /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes
+++ sort /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.to.ncbi.fake.names
++ '[' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.checkAgpStatusOK.txt ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing bbi files'
+# 2015-12-19T12:43:06 1450557786 constructing bbi files
++ mkdir -p /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi
++ '[' /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.checkAgpStatusOK.txt -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.assembly.bb ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing ucsc assembly bbi'
+# 2015-12-19T12:43:06 1450557786 constructing ucsc assembly bbi
++ /hive/data/inside/ncbi/genomes/refseq/scripts/agpToBbi.sh ucsc GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi
++ '[' /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.checkAgpStatusOK.txt -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.assembly.ncbi.bb ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing ncbi assembly bbi'
+# 2015-12-19T12:43:06 1450557786 constructing ncbi assembly bbi
++ /hive/data/inside/ncbi/genomes/refseq/scripts/agpToBbi.sh ncbi GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.description.html
++ '[' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.description.html ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing description.html'
+# 2015-12-19T12:43:06 1450557786 constructing description.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/gatewayPage.pl /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_assembly_report.txt
++ /hive/data/inside/ncbi/genomes/refseq/scripts/buildStats.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes
++ '[' /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.gc5Base.bw ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing ucsc gc5Base.bw'
+# 2015-12-19T12:43:06 1450557786 constructing ucsc gc5Base.bw
++ hgGcPercent -wigOut -doGaps -file=stdout -win=5 -verbose=0 test /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.2bit
++ gzip -c
++ wigToBigWig /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.gc5Base.wigVarStep.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ucsc.chrom.sizes /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.gc5Base.bw
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.gc5Base.wigVarStep.gz
++ '[' /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.gc5Base.ncbi.bw ']'
++ echo '# 2015-12-19T12:43:06 1450557786 constructing ncbi gc5Base.bw'
+# 2015-12-19T12:43:06 1450557786 constructing ncbi gc5Base.bw
++ gzip -c
++ hgGcPercent -wigOut -doGaps -file=stdout -win=5 -verbose=0 test /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit
++ wigToBigWig /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.gc5Base.wigVarStep.ncbi.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.gc5Base.ncbi.bw
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.gc5Base.wigVarStep.ncbi.gz
++ '[' /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_rm.out.gz -nt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.rmsk.class.profile.txt ']'
++ printf '# %s ncbiGene.sh %s\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 ncbiGene.sh GCA_000018345.1_ASM1834v1
++ /hive/data/inside/ncbi/genomes/refseq/scripts/ncbiGene.sh /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.gff.gz /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/
+# 2015-12-19T12:43:12 1450557792 processing /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.gff.gz
+kept: 5502 dropped: 0
+checked: 5502 failed: 0
+# 2015-12-19T12:43:12 1450557792 before lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2015-12-19T12:43:12 1450557792 lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+Got 2 lifts in GCA_000018345.1_ASM1834v1.ncbiToUcsc.lift
+Lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2015-12-19T12:43:12 1450557792 genePredToBigGenePred GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2015-12-19T12:43:12 1450557792 bedToBigBed GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+pass1 - making usageList (2 chroms): 6 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 55 millis
+Sorting and writing extra index 0: 2 millis
+# 2015-12-19T12:43:12 1450557792 ncbiGene itemCount: 5,502 basesCovered: 5,993,513
+# 2015-12-19T12:43:12 1450557792 building ncbiGene for UCSC browser GCA_000018345.1_ASM1834v1
+pass1 - making usageList (2 chroms): 6 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 59 millis
+Sorting and writing extra index 0: 2 millis
++ '[' '!' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.faCount.signature.txt ']'
++ twoBitToFa /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit stdout
++ faCount stdin
++ grep -P '^total\t'
++ touch -r /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.2bit /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.faCount.signature.txt
++ rm -f /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/trackDb.txt /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.trackDb.ncbi.txt
++ /hive/data/inside/ncbi/genomes/refseq/scripts/trackDb.sh ucsc GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.bb: No such file or directory
++ '[' '!' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.trackDb.txt ']'
++ /hive/data/inside/ncbi/genomes/refseq/scripts/trackDb.sh ncbi GCA_000018345.1_ASM1834v1 /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.ncbi.bb: No such file or directory
++ '[' '!' -s /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.trackDb.ncbi.txt ']'
++ printf '# %s %s.assembly.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.assembly.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/assemblyDescription.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ printf '# %s %s.gap.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.gap.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/gapDescription.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ printf '# %s %s.cpgIslands.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.cpgIslands.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/cpgDescription.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ printf '# %s %s.gc5Base.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.gc5Base.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/gc5Description.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ printf '# %s %s.repeatMasker.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.repeatMasker.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/rmskDescription.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ printf '# %s %s.ncbiGene.html\n' '2015-12-19T12:43:06 1450557786' GCA_000018345.1_ASM1834v1
+# 2015-12-19T12:43:06 1450557786 GCA_000018345.1_ASM1834v1.ncbiGene.html
++ /hive/data/inside/ncbi/genomes/refseq/scripts/ncbiGeneDescription.pl /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1
++ exit 0
+# 2016-02-19T17:50:13 1455933013 ncbiToUcsc.sh bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+# 2016-02-19T17:50:13 1455933013 constructing bbi files
+# 2016-02-19T17:50:13 1455933013 constructing description.html
+# 2016-02-19T17:50:13 1455933013 ncbiGene.sh GCA_000018345.1_ASM1834v1
+# 2016-02-19T17:50:13 1455933013 processing /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.gff.gz
+kept: 5502 dropped: 0
+checked: 5502 failed: 0
+# 2016-02-19T17:50:13 1455933013 before lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-19T17:50:13 1455933013 lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+Got 2 lifts in GCA_000018345.1_ASM1834v1.ncbiToUcsc.lift
+Lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-19T17:50:13 1455933013 genePredToBigGenePred GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-19T17:50:13 1455933013 bedToBigBed GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+pass1 - making usageList (2 chroms): 6 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 72 millis
+Sorting and writing extra index 0: 2 millis
+# 2016-02-19T17:50:13 1455933013 ncbiGene itemCount: 5,502 basesCovered: 5,993,513
+# 2016-02-19T17:50:13 1455933013 building ncbiGene for UCSC browser GCA_000018345.1_ASM1834v1
+pass1 - making usageList (2 chroms): 6 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 60 millis
+Sorting and writing extra index 0: 2 millis
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.bb: No such file or directory
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.ncbi.bb: No such file or directory
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.assembly.html
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.gap.html
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.cpgIslands.html
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.gc5Base.html
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.repeatMasker.html
+# 2016-02-19T17:50:13 1455933013 GCA_000018345.1_ASM1834v1.ncbiGene.html
+# 2016-02-22T15:10:32 1456182632 ncbiToUcsc.sh bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.fna.gz
+# 2016-02-22T15:10:32 1456182632 generate idKeys for NCBI 2bit file GCA_000018345.1_ASM1834v1
+# 2016-02-22T15:10:32 1456182632 constructing bbi files
+# 2016-02-22T15:10:32 1456182632 constructing description.html
+# 2016-02-22T15:10:32 1456182632 ncbiGene.sh GCA_000018345.1_ASM1834v1
+# 2016-02-22T15:10:32 1456182632 processing /hive/data/outside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1_genomic.gff.gz
+kept: 5502 dropped: 0
+checked: 5502 failed: 0
+# 2016-02-22T15:10:32 1456182632 before lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-22T15:10:32 1456182632 lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+Got 2 lifts in GCA_000018345.1_ASM1834v1.ncbiToUcsc.lift
+Lifting GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-22T15:10:32 1456182632 genePredToBigGenePred GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+# 2016-02-22T15:10:32 1456182632 bedToBigBed GCA_000018345.1_ASM1834v1.ncbiGene.ncbi.genePred.gz
+pass1 - making usageList (2 chroms): 4 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 61 millis
+Sorting and writing extra index 0: 3 millis
+# 2016-02-22T15:10:32 1456182632 ncbiGene itemCount: 5,502 basesCovered: 5,993,513
+# 2016-02-22T15:10:32 1456182632 building ncbiGene for UCSC browser GCA_000018345.1_ASM1834v1
+pass1 - making usageList (2 chroms): 4 millis
+pass2 - checking and writing primary data (5502 records, 20 fields): 64 millis
+Sorting and writing extra index 0: 3 millis
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.bb: No such file or directory
+ls: cannot access /hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/bbi/GCA_000018345.1_ASM1834v1.rmsk.*.ncbi.bb: No such file or directory
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.assembly.html
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.gap.html
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.cpgIslands.html
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.gc5Base.html
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.repeatMasker.html
+# 2016-02-22T15:10:32 1456182632 GCA_000018345.1_ASM1834v1.ncbiGene.html

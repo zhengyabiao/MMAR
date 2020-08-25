@@ -1,0 +1,3 @@
+#LOOP
+./runCpg.csh $(root1) {check out exists results/$(root1).cpg}
+#ENDLOOP

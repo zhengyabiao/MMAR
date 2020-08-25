@@ -1,0 +1,2 @@
+"./runCpg.csh part001 results/part001.cpg",0,0,1,{{"out","exists","results/part001.cpg",},},1,{{"559665401","ku-1-20.local",0,1453103983,1453103994,1453103994,0,1,0,0,0,0,0,0,0,0,1,"/tmp/para559665401.err",},},"./runCpg.csh part001 {check out exists results/part001.cpg}",
+"./runCpg.csh part000 results/part000.cpg",0,0,1,{{"out","exists","results/part000.cpg",},},1,{{"559665402","ku-1-24.local",0.42,1453103983,1453103994,1453103997,0,1,0,0,0,0,0,0,0,0,1,"/tmp/para559665402.err",},},"./runCpg.csh part000 {check out exists results/part000.cpg}",

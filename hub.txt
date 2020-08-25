@@ -1,0 +1,6 @@
+hub MMAR
+shortLabel MMARHub
+longLabel genomes from RefSeq assemblies
+genomesFile GCA_000018345.1_ASM1834v1.genomes.txt
+email yabiaozheng@seqhealth.cn
+descriptionUrl GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.description.html

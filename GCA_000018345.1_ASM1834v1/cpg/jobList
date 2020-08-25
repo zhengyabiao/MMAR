@@ -1,0 +1,2 @@
+./runCpg.csh part001 {check out exists results/part001.cpg}
+./runCpg.csh part000 {check out exists results/part000.cpg}

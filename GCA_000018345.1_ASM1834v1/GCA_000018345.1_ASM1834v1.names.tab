@@ -1,0 +1,4 @@
+#taxId	commonName	submitter	asmName	orgName	bioSample	asmType	asmLevel	asmDate	asmAccession
+216594	Mycobacterium marinum M	Wellcome Trust Sanger Institute	ASM1834v1	Mycobacterium marinum M	SAMN02604327	n/a	Complete Genome	15 Apr 2008	GCA_000018345.1
+# reading chrom.sizes file:
+#	'/hive/data/inside/ncbi/genomes/genbank/bacteria/Mycobacterium_marinum/latest_assembly_versions/GCA_000018345.1_ASM1834v1/GCA_000018345.1_ASM1834v1.ncbi.chrom.sizes'
