@@ -49,6 +49,34 @@ type bigWig 0 100
 bigDataUrl bbi/GCA_000018345.1_ASM1834v1.gc5Base.bw
 html GCA_000018345.1_ASM1834v1.gc5Base
 
+track IP
+shortLabel IP Depth
+longLabel Depth of IP reads
+visibility full
+autoScale On
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+type bigWig
+bigDataUrl MMAR_0500_IP.bw
+
+track Input
+shortLabel Input Depth
+longLabel Depth of Input reads
+visibility full
+autoScale On
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+type bigWig
+bigDataUrl MMAR_0500_Input.bw
+
 track Peak
 shortLabel Chip Peak
 longLabel Chip Peak
@@ -62,3 +90,5 @@ color 0,0,0
 altColor 128,128,128
 type bigBed
 bigDataUrl MMAR_0500_peaks.bb
+
+
